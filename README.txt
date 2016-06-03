@@ -15,4 +15,4 @@ when the output is saturated
 
 // todo: adding templates to generate PID objects to work with any data
 type
-// todo: adding the delay integral anti windup method
+// todo: adding the back-calculation integral anti windup method
