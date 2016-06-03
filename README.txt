@@ -1,11 +1,18 @@
 ***************************************************************
-* Arduino PID Library - Version 1.1.1
-* by Brett Beauregard <br3ttb@gmail.com> brettbeauregard.com
+* Arduino PID Library - Version 1.2.0
+* by Khoa Dang <minhkhoadang@gmail.com> - Originally by Brett Beauregard <br3ttb@gmail.com> brettbeauregard.com
 *
 * This Library is licensed under a GPLv3 License
 ***************************************************************
 
- - For an ultra-detailed explanation of why the code is the way it is, please visit: 
-   http://brettbeauregard.com/blog/2011/04/improving-the-beginners-pid-introduction/
+Improvisation made:
+- Change of input and calculation type to float to save memory and
+performance
+- Change of output type to integer, as most of low level control
+applications tends to drive directly from the Arduino's PWM outputs
+- Modifying the anti windup method to stop increasing the integral term
+when the output is saturated
 
- - For function documentation see:  http://playground.arduino.cc/Code/PIDLibrary
+// todo: adding templates to generate PID objects to work with any data
+type
+// todo: adding the delay integral anti windup method
